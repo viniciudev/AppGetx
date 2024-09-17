@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:projectgetx/modules/auth/login_view.dart';
 import 'package:projectgetx/routes/app_routes.dart';
 
 import 'lang/translation_service.dart';
@@ -24,13 +25,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       enableLog: true,
       // logWriterCallback: Logger.write,
-      initialRoute: AppRoutes.HOME,
+      initialRoute: AppRoutes.LOGIN,
       getPages: AppPages.pages,
 
-      locale: TranslationService.locale,
-      fallbackLocale: TranslationService.fallbackLocale,
-      translations: TranslationService(),
+      // locale: TranslationService.locale,
+      // fallbackLocale: TranslationService.fallbackLocale,
+      // translations: TranslationService(),
       title: "Getx",
+      home: const LoginView(),
     );
   }
 }
